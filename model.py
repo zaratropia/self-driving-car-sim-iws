@@ -30,7 +30,7 @@ model.add(Lambda(lambda x: x / 127.5 - 1.0, input_shape=(64, 64, 3)))
 
 model.add(Flatten())
 
-# Next, four fully connected layers
+# TODO: Next, four fully connected layers
 
 ###########################################
 # ADD MISSING FULLY CONNECTED LAYERS HERE #
