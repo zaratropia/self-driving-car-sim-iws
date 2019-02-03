@@ -1,5 +1,5 @@
 # Übung zum autonomen Fahren im Informatik-Workshop (Master)
-#### Wintersemeter 18/19 - Hochschule Mannheim
+#### Wintersemester 18/19 - Hochschule Mannheim
 
 
 ## Simulator und Installation
@@ -12,6 +12,8 @@ Befehl: `conda create env -f environment[-gpu].yml`
 ## Training
 
 [Forschungsarbeit von NVIDIA](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)
+
+Der relevante Quellcode befindet sich in der `model.py`. Hier müssen zu erst noch einige Zeilen ergänzt werden. Im folgenden findet ihr einige Hinweise dazu.
 
 ### Snippets Schichten im CNN
 
@@ -49,5 +51,6 @@ print('Hallo, ich habe 5 Nachkomma-Stellen: {:.5f}'.format(0.167341324))`
 ```
 
 Autonomes Fahren: `python drive.py model.json`
+
 *Wichtig: Simulator muss im 'Autonomous Mode' sein*
 
