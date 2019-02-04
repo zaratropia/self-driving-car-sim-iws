@@ -31,17 +31,18 @@ def crop(image, top_cropping_percent):
 
 @sio.on('telemetry')
 def telemetry(sid, data):
+
     # The current steering angle of the car
-    steering_angle = # ???
+    # steering_angle = ???
 
     # The current throttle of the car
-    throttle = # ???
+    # throttle = ???
 
     # The current speed of the car
-    speed = # ???
+    # speed = ???
 
     # The current image from the center camera of the car
-    imgString = # ???
+    # imgString = ???
     image = Image.open(BytesIO(base64.b64decode(imgString)))
     image_array = np.asarray(image)
 
@@ -62,7 +63,7 @@ def telemetry(sid, data):
 
 @sio.on('connect')
 def connect(sid, environ):
-    print("connect ", sid)o
+    print("connect ", sid)
     send_control(0, 0)
 
 
