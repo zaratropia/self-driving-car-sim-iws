@@ -43,6 +43,9 @@ model.summary()
 
 model.compile(optimizer=Adam(learning_rate), loss="mse", )
 
+# Fix arbitarty csv file 
+helper.fix_csv_header()
+
 # create two generators for training and validation
 train_gen = helper.generate_next_batch()
 validation_gen = helper.generate_next_batch()

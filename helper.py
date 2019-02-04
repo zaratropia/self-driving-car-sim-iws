@@ -1,6 +1,7 @@
 import errno
 import json
 import os
+import csv 
 
 import cv2
 import matplotlib.pyplot as plt
@@ -14,6 +15,18 @@ from scipy.stats import bernoulli
 DRIVING_LOG_FILE = './data/IMG-NEW/driving_log.csv'
 IMG_PATH = './data/'
 STEERING_COEFFICIENT = 0.229
+
+def fix_csv_header():
+  header = ['center', 'left', 'right', 'steering', 'throttle', 'brake', 'speed']
+  with open(DRIVING_LOG_FILE,newline='') as f:
+    r = csv.reader(f)
+    data = [line for line in r]
+    if (data[0] == header):
+      return
+  with open(DRIVING_LOG_FILE,'w',newline='') as f:
+    w = csv.writer(f)
+    w.writerow(header)
+    w.writerows(data)
 
 
 def crop(image, top_percent, bottom_percent):
