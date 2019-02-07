@@ -7,7 +7,7 @@
 
 Installation der Umgebung geht nur einfach wenn `conda` installiert ist! Ansonten müssen alle benötigenten Pakete in der passenden Version manuell installiert werden..
 
-Befehl: `conda create env -f environment[-gpu].yml`
+Befehl: `conda env create -f environment[-gpu].yml`
 
 ## Training
 
